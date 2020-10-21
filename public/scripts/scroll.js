@@ -1,1 +1,3 @@
-$('html, body').scrollTop($(document).height());
+$(document).ready(function () {
+  $('html, body').scrollTop($(document).height());
+});

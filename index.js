@@ -4,12 +4,19 @@ const express = require('express');
 var app = require('express')();
 var http = require('http').Server(app);
 var bodyParser = require('body-parser');
+var sanitizer = require('sanitizer');
+
+const createDOMPurify = require('dompurify');
+const { JSDOM } = require('jsdom');
+
+const window = new JSDOM('').window;
+const DOMPurify = createDOMPurify(window);
+
+var port = process.env.PORT || 3000;
 
 const JSONdb = require('simple-json-db');
 const db = new JSONdb(__dirname + '/guestbook.json');
 const reqguest = new JSONdb(__dirname + '/stupid.json');
-
-var port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -51,13 +58,18 @@ app.post("/genbox", function (req, res) {
   var username = req.body.username;
   const message = req.body.message;
 
+  var clean_username = DOMPurify.sanitize(username);
+  const clean_message = DOMPurify.sanitize(message);
+
+  console.log(clean_username);
+
   if (username === '' || username === null || username === undefined) {
-    username = "Pharmacy Customer";
+    clean_username = "Pharmacy Customer";
   }
 
   var post = `<div class="message">
-  <h3><b>` + username + `</b></h3>
-  <h4>` + message + `</h4>
+  <h3><b>` + clean_username + `</b></h3>
+  <h4>` + sanitizer.escape(message) + `</h4>
   </div>`;
 
   var final_post = db.get("genbox") + post;
