@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Pharmacy</title>
+
+    <link href="https://pngimg.com/uploads/pills/pills_PNG16534.png" rel="icon">
+    <link href="https://thepharmacy.codesalvageon.repl.co/styles/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="center window">
+      <h3>Pharmacy General</h3>
+      <td><button onclick="location.href = ''">Refresh</button></td>
+      <br/>
+      <iframe src="https://thepharmacy.codesalvageon.repl.co/genbox" width="650" height="370" frameBorder="0">
+      </iframe>
+      <form align="left" id="panel" method="POST" action="https://thepharmacy.codesalvageon.repl.co/genbox">
+        <h3>Username(Optional): <input class="text-input" type="text" placeholder="Pharmacy Customer" name="username"/></h3>
+        <h3>Message: <input class="text-input" type="text" name="message" required/></h3>
+        <button id="post">Post</button>
+      </form>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://thepharmacy.codesalvageon.repl.co/scripts/script.js"></script>
+  </body>
+</html>

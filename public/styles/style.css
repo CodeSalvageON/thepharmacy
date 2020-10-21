@@ -1,0 +1,83 @@
+body {
+  background-color: aliceblue;
+  font-family: 'Commissioner', sans-serif;
+}
+
+table, th, td {
+  width: 500px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+th {
+  background-color: aquamarine;
+}
+
+td {
+  width: 500px;
+  background-color: aliceblue;
+  transition: background-color 1s ease-in-out;
+}
+
+td:hover {
+  cursor: default;
+  background-color: red;
+  transition: background-color 1s ease-in-out;
+}
+
+.center {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.window {
+  width: 650px;
+  height: 600px;
+  border-radius: 8px;
+  background-color: #6699ff;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.text-input {
+  border: hidden;
+  border-radius: 8px;
+  background-color: aliceblue;
+  font-family: 'Commissioner', sans-serif;
+}
+
+button {
+  padding: 8px;
+  border: hidden;
+  border-radius: 8px;
+  background-color: aquamarine;
+  font-family: 'Commissioner', sans-serif;
+  transition: background-color 1s ease-in-out;
+}
+
+button:hover {
+  cursor: default;
+  background-color: red;
+  transition: background-color 1s ease-in-out;
+}
+
+#panel {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: aquamarine;
+}
+
+#logo {
+  top: -15px;
+  position: relative;
+}
+
+#post {
+  background-color: azure;
+  transition: background-color 1s ease-in-out;
+}
+
+#post:hover {
+  background-color: red;
+  transition: background-color 1s ease-in-out;
+}

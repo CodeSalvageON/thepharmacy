@@ -1,0 +1,7 @@
+db.get('posts')
+  .push({ id: 'genbox', contents: '<link href="https://thepharmacy.codesalvageon.repl.co/styles/external.css" rel="stylesheet">'})
+  .write()
+
+db.get('posts')
+  .find({ id: 1 })
+  .value()

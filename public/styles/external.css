@@ -1,0 +1,28 @@
+body {
+  font-family: 'Commissioner', sans-serif;
+}
+
+.center {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.message {
+  border-radius: 8px;
+  background-color: blanchedalmond;
+  font-family: 'Commissioner', sans-serif;
+}
+
+#panel {
+  left: 0px;
+  bottom: -5px;
+  z-index: 100;
+  width: 650px;
+  height: 55px;
+  padding: 5px;
+  position: fixed;
+  border-radius: 8px;
+  background-color: aquamarine;
+  font-family: 'Commissioner', sans-serif;
+}
